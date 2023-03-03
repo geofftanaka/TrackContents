@@ -1,0 +1,23 @@
+:root {
+    --primary-colour: #2196f3;
+    --secondary-colour: #AA8539;
+    --cancel-colour: #ef5350;
+    --back-colour: #3C4546;
+    --bright-colour: #64b5f6;
+    --vbright-colour: #90caf9;
+}
+
+html {
+    background-color: var(--back-colour);
+    color: var(--secondary-colour);
+}
+
+.main {
+    background-color: var(--back-colour);
+    width: 100%; 
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--primary-colour);
+}

@@ -1,16 +1,19 @@
 ﻿using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
+using System.Resources;
 
 namespace TrackContents.Models
 {
 
     public class CategoriesModel
     {
-        const string connectionString = "Data Source=HEPHAESTUS\\MSSQLSERVER01;Initial Catalog=TrackContents;Integrated Security=SSPI;";
+        string connectionString = String.Empty;
 
         public CategoriesModel()
         {
-
+            ResourceManager rm = new ResourceManager("TrackContents.Resources.Data", Assembly.GetExecutingAssembly());
+            connectionString = rm.GetString("ConnectionString");
         }
                
         public async Task<List<Category>> GetCategories()
